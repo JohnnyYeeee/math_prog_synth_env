@@ -1,0 +1,20 @@
+What are the prime factors of 329?
+7, 47
+What are the prime factors of 2250?
+2, 3, 5
+What are the prime factors of 7380?
+2, 3, 5, 41
+What are the prime factors of 6792?
+2, 3, 283
+List the prime factors of 32253.
+3, 13, 827
+List the prime factors of 1312.
+2, 41
+What are the prime factors of 773?
+773
+What are the prime factors of 12963?
+3, 29, 149
+List the prime factors of 31114.
+2, 47, 331
+What are the prime factors of 1316?
+2, 7, 47

@@ -1,0 +1,28 @@
+Find the third derivative of 2*d**4 - 35*d**2 - 695 wrt d.
+48*d
+Find the third derivative of -272*j**5 + j**3 - 8234*j**2 wrt j.
+-16320*j**2 + 6
+Solve 0 = 4*b + b + 15 for b.
+-3
+Solve 0 = 4*f - 0*t - 4*t - 4, -4*f + t = -13 for f.
+4
+Solve -3*h**2/2 - 24*h - 45/2 = 0 for h.
+-15, -1
+Factor -n**2/3 - 25*n - 536/3.
+-(n + 8)*(n + 67)/3
+Find the first derivative of 2*d**4 - 35*d**2 - 695 wrt d.
+8*d**3 - 70*d
+Calculate the remainder when 93 is divided by 59.
+34
+Calculate the highest common divisor of 1300 and 300.
+100
+Is 15 a fac of 720?
+True
+Is 93163 a prime number?
+False
+Is 66574 a composite number?
+True
+Calculate the smallest common multiple of 351 and 141.
+16497
+What are the prime factors of 329?
+7, 47

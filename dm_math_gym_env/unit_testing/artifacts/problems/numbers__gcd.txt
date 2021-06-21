@@ -1,0 +1,20 @@
+Calculate the highest common divisor of 1300 and 300.
+100
+Calculate the greatest common factor of 11130 and 6.
+6
+What is the greatest common divisor of 352 and 3454?
+22
+Calculate the greatest common divisor of 17 and 272.
+17
+Calculate the highest common divisor of 11711 and 49.
+49
+What is the greatest common divisor of 275 and 495?
+55
+Calculate the highest common factor of 4 and 534.
+2
+What is the highest common factor of 8 and 2792?
+8
+Calculate the highest common factor of 84 and 15932.
+28
+Calculate the highest common divisor of 54 and 27.
+27

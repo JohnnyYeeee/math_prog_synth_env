@@ -1,0 +1,20 @@
+Is 93163 a prime number?
+False
+Is 29179 prime?
+True
+Is 323431 a prime number?
+False
+Is 5939 prime?
+True
+Is 1454 prime?
+False
+Is 350767 prime?
+True
+Is 66574 a composite number?
+True
+Is 3037 composite?
+False
+Is 28151 composite?
+False
+Is 2053 a prime number?
+True

@@ -1,0 +1,358 @@
+{
+    "Suppose -3*z + 133 = 4*n - 10, 5*n = 25. Let l = -21 + z. Let r = l + -11. Calculate the least common multiple of 7 and r.": [
+        "-3*z + 133 = 4*n - 10",
+        "5*n = 25",
+        "l = -21 + z",
+        "r = l + -11",
+        "7",
+        "r"
+    ],
+    "Calculate the common denominator of 1/(3/(-6)) - 402/(-60) and -71/12.": [
+        "1/(3/(-6)) - 402/(-60)",
+        "-71/12"
+    ],
+    "What is the common denominator of -64/1065 and 92/105?": [
+        "-64/1065",
+        "92/105"
+    ],
+    "What is the smallest common multiple of (-4)/12*(-20 - -2) and 4?": [
+        "(-4)/12*(-20 - -2)",
+        "4"
+    ],
+    "Let q = -54.3 + 54. Suppose 0 = -5*z - 8 - 7. Which is the nearest to -1/5?  (a) 5  (b) z  (c) q": [
+        "q = -54.3 + 54",
+        "0 = -5*z - 8 - 7",
+        "-1/5",
+        "(a) 5  (b) z  (c) q"
+    ],
+    "Let d(j) = -j**3 - 5*j**2 - 4*j + 1. Let n be d(-4). Suppose -5*h = 2*i - 2*h + n, 0 = i + 5*h - 10. What is the nearest to 0 in 1/3, i, -2?": [
+        "d(j) = -j**3 - 5*j**2 - 4*j + 1",
+        "n",
+        "d(-4)",
+        "-5*h = 2*i - 2*h + n",
+        "0 = i + 5*h - 10",
+        "0",
+        "1/3",
+        "i",
+        "-2"
+    ],
+    "Let f = -2.31 + 0.31. What is the nearest to f in 0.3, -2, 0.2?": [
+        "f = -2.31 + 0.31",
+        "f",
+        "0.3",
+        "-2",
+        "0.2"
+    ],
+    "Let o(v) = 77*v + 1. Let b(l) = 155*l + 2. Suppose 4*c - 25 = -c. Let a(u) = c*o(u) - 3*b(u). Is a(-4) composite?": [
+        "o(v) = 77*v + 1",
+        "b(l) = 155*l + 2",
+        "4*c - 25 = -c",
+        "a(u) = c*o(u) - 3*b(u)",
+        "a(-4)"
+    ],
+    "Let j = -5 - 28. Is j/6*(-1 - 13) a composite number?": [
+        "j = -5 - 28",
+        "j/6*(-1 - 13)"
+    ],
+    "Suppose 0 = -j - 4*a + 611, 4*j + a - 1468 = 1051. Is j prime?": [
+        "0 = -j - 4*a + 611",
+        "4*j + a - 1468 = 1051",
+        "j"
+    ],
+    "Let l(b) = -142004*b - 62917*b - 377393*b. Let d be l(-1). Let v = d - 262314. Round v to the nearest 100000.": [
+        "l(b) = -142004*b - 62917*b - 377393*b",
+        "d",
+        "l(-1)",
+        "v = d - 262314",
+        "v",
+        "100000"
+    ],
+    "Suppose 5*t - 2 = -7. Let z be -612*1 + (-2 - -3). Let c be t/(-4) + z/(-4). What is c rounded to the nearest ten?": [
+        "5*t - 2 = -7",
+        "z",
+        "-612*1 + (-2 - -3)",
+        "c",
+        "t/(-4) + z/(-4)",
+        "c"
+    ],
+    "Let m = 1.5 - 7.5. Let z = m - -22. Let v = z + -16.00017. Round v to four decimal places.": [
+        "m = 1.5 - 7.5",
+        "z = m - -22",
+        "v = z + -16.00017",
+        "v"
+    ],
+    "Let w(b) = -2*b - 3. Suppose 0*j + 16 = -3*j - o, j + 3*o = 8. Let u = j - -5. What is w(u)?": [
+        "w(b) = -2*b - 3",
+        "0*j + 16 = -3*j - o",
+        "j + 3*o = 8",
+        "u = j - -5",
+        "w(u)"
+    ],
+    "Let p(o) = 2*o**3 - 12*o**2 + 6*o - 5. Let i(m) = -m**3 + 6*m**2 - 3*m + 2. Let q be 82/12 - 2/(-12). Let f(s) = q*i(s) + 3*p(s). Determine f(5).": [
+        "p(o) = 2*o**3 - 12*o**2 + 6*o - 5",
+        "i(m) = -m**3 + 6*m**2 - 3*m + 2",
+        "q",
+        "82/12 - 2/(-12)",
+        "f(s) = q*i(s) + 3*p(s)",
+        "f(5)"
+    ],
+    "Let l(r) be the third derivative of 3*r**6/40 - r**5/60 - 6*r**2. What is l(-1)?": [
+        "l(r)",
+        "3*r**6/40 - r**5/60 - 6*r**2",
+        "l(-1)"
+    ],
+    "Let o = -788/3 - -260. Which is bigger: -0.1 or o?": [
+        "o = -788/3 - -260",
+        "-0.1",
+        "o"
+    ],
+    "Let r = 4 + -2. Which is greater: r or 0.09?": [
+        "r = 4 + -2",
+        "r",
+        "0.09"
+    ],
+    "Let q = 17 - 18. Let v be (2 + q)*12/(-16). Is v > -1?": [
+        "q = 17 - 18",
+        "v",
+        "(2 + q)*12/(-16)",
+        "v > -1"
+    ],
+    "Suppose 3*x + 197 = 4*x. Calculate the remainder when x is divided by 33.": [
+        "3*x + 197 = 4*x",
+        "x",
+        "33"
+    ],
+    "Suppose -106 = -2*u + s, u - 40 = -5*s + 13. Calculate the remainder when u is divided by 14.": [
+        "-106 = -2*u + s",
+        "u - 40 = -5*s + 13",
+        "u",
+        "14"
+    ],
+    "Let x = -41 - -20. Let t = x + 27. Calculate the remainder when t is divided by 4.": [
+        "x = -41 - -20",
+        "t = x + 27",
+        "t",
+        "4"
+    ],
+    "Let d = -25019/90 - -278. Let v(j) be the third derivative of 0 + 1/27*j**3 - d*j**5 + 1/54*j**4 + 3*j**2 + 0*j. Suppose v(o) = 0. What is o?": [
+        "d = -25019/90 - -278",
+        "v(j)",
+        "0 + 1/27*j**3 - d*j**5 + 1/54*j**4 + 3*j**2 + 0*j",
+        "v(o) = 0",
+        "o"
+    ],
+    "Let g be 2 - (0 - (-1 - -1)). Determine q so that -q**4 - 6*q**2 + 0*q**4 - 3 + g - 4*q - 4*q**3 = 0.": [
+        "g",
+        "2 - (0 - (-1 - -1))",
+        "q",
+        "-q**4 - 6*q**2 + 0*q**4 - 3 + g - 4*q - 4*q**3 = 0"
+    ],
+    "Let d(k) be the first derivative of -1 - 4/3*k**3 + 0*k + 1/2*k**2. Find z such that d(z) = 0.": [
+        "d(k)",
+        "-1 - 4/3*k**3 + 0*k + 1/2*k**2",
+        "z",
+        "d(z) = 0"
+    ],
+    "Suppose -55 = -8*l + 3*l. Let k = l + -7. What is the units digit of k?": [
+        "-55 = -8*l + 3*l",
+        "k = l + -7",
+        "k"
+    ],
+    "Let t(p) = p**3 - 3*p**2 - 4*p + 2. Let a be t(4). Suppose 2*f = a + 2. Let l = f - -12. What is the units digit of l?": [
+        "t(p) = p**3 - 3*p**2 - 4*p + 2",
+        "a",
+        "t(4)",
+        "2*f = a + 2",
+        "l = f - -12",
+        "l"
+    ],
+    "Suppose 5*j - 1126 + 331 = 0. What is the tens digit of j?": [
+        "5*j - 1126 + 331 = 0",
+        "j"
+    ],
+    "Suppose 0 = -4*x + 8*x - 40. Let h(i) = i**2 - 9*i - 14. Let n be h(x). Sort -1, 4, n.": [
+        "0 = -4*x + 8*x - 40",
+        "h(i) = i**2 - 9*i - 14",
+        "n",
+        "h(x)",
+        "-1",
+        "4",
+        "n"
+    ],
+    "Let g = 1 + 2. Let a = 0.95 - -0.05. Put a, g, -1 in descending order.": [
+        "g = 1 + 2",
+        "a = 0.95 - -0.05",
+        "a",
+        "g",
+        "-1"
+    ],
+    "Let m be (-7)/56 - (-1)/(-8). Sort m, 0, -4 in descending order.": [
+        "m",
+        "(-7)/56 - (-1)/(-8)",
+        "m",
+        "0",
+        "-4"
+    ],
+    "Let w be (-1 + 13)*3/(-6). Let b = w - -6. Let i = 2 - b. Solve -15 = 3*c + i*c for c.": [
+        "w",
+        "(-1 + 13)*3/(-6)",
+        "b = w - -6",
+        "i = 2 - b",
+        "-15 = 3*c + i*c",
+        "c"
+    ],
+    "Suppose -c + 4*v + 2 = -24, -4*c - 3*v + 9 = 0. Solve 2*b - c = -b for b.": [
+        "-c + 4*v + 2 = -24",
+        "-4*c - 3*v + 9 = 0",
+        "2*b - c = -b",
+        "b"
+    ],
+    "Let v(k) = k**3 + k**2 - k - 3. Let d be v(0). Let a be ((-15)/2)/d*4. Let x = a + -8. Solve -3 + 11 = x*p for p.": [
+        "v(k) = k**3 + k**2 - k - 3",
+        "d",
+        "v(0)",
+        "a",
+        "((-15)/2)/d*4",
+        "x = a + -8",
+        "-3 + 11 = x*p",
+        "p"
+    ],
+    "Let h(t) = t**3 + t**2 + 1. Let v(d) = 6*d**3 + 24*d**2 + 4. Let w(j) = 4*h(j) - v(j). What is the third derivative of w(x) wrt x?": [
+        "h(t) = t**3 + t**2 + 1",
+        "v(d) = 6*d**3 + 24*d**2 + 4",
+        "w(j) = 4*h(j) - v(j)",
+        "w(x)",
+        "x"
+    ],
+    "Let v = -7 - -12. Suppose 0 = 2*h - 3*x - 16 - 5, 0 = -v*h + 3*x + 30. What is the first derivative of 5*t - h - t + 0 - 2*t wrt t?": [
+        "v = -7 - -12",
+        "0 = 2*h - 3*x - 16 - 5",
+        "0 = -v*h + 3*x + 30",
+        "5*t - h - t + 0 - 2*t",
+        "t"
+    ],
+    "Let b(y) be the second derivative of -3*y**8/56 - y**4/6 - y. What is the third derivative of b(o) wrt o?": [
+        "b(y)",
+        "-3*y**8/56 - y**4/6 - y",
+        "b(o)",
+        "o"
+    ],
+    "Let p = -3 - -6. Let w(d) = 0*d**2 + p*d**2 - 2*d**2 - 3*d**2. Let t(b) = -3*b. Give t(w(k)).": [
+        "p = -3 - -6",
+        "w(d) = 0*d**2 + p*d**2 - 2*d**2 - 3*d**2",
+        "t(b) = -3*b",
+        "t(w(k))"
+    ],
+    "Let m(s) = 7*s - 12. Let z(g) = -5*g**2. What is z(m(k))?": [
+        "m(s) = 7*s - 12",
+        "z(g) = -5*g**2",
+        "z(m(k))"
+    ],
+    "Let w(q) = 2*q**2. Let v(x) be the first derivative of 0*x + 0*x**2 + 4/3*x**3 - 2. Determine v(w(p)).": [
+        "w(q) = 2*q**2",
+        "v(x)",
+        "0*x + 0*x**2 + 4/3*x**3 - 2",
+        "v(w(p))"
+    ],
+    "Let f be 4/22 - 20/(-11). Suppose s = -0*s + 4*n + 12, 0 = -n - f. Which is the second smallest value?  (a) -0.2  (b) s  (c) 2/7": [
+        "f",
+        "4/22 - 20/(-11)",
+        "s = -0*s + 4*n + 12",
+        "0 = -n - f",
+        "(a) -0.2  (b) s  (c) 2/7"
+    ],
+    "Let s = 1.5 + -1.5. Suppose 0 = p + p + 8. Which is the third biggest value?  (a) s  (b) -5  (c) p": [
+        "s = 1.5 + -1.5",
+        "0 = p + p + 8",
+        "(a) s  (b) -5  (c) p"
+    ],
+    "Let r = 1 - -4. Let u be (-3 - -1)*3/(-2). Suppose -r*s - u = -4*s. Which is the third biggest value?  (a) -0.3  (b) 2/11  (c) s": [
+        "r = 1 - -4",
+        "u",
+        "(-3 - -1)*3/(-2)",
+        "-r*s - u = -4*s",
+        "(a) -0.3  (b) 2/11  (c) s"
+    ],
+    "Suppose 3*n = -0*x - 3*x + 93, -2*n - 2 = 0. Does 12 divide x?": [
+        "3*n = -0*x - 3*x + 93",
+        "-2*n - 2 = 0",
+        "12",
+        "x"
+    ],
+    "Is 1330/(-28)*4/(-2) a multiple of 19?": [
+        "1330/(-28)*4/(-2)",
+        "19"
+    ],
+    "Is 3 - (1344/(-10) + 2/5) a multiple of 36?": [
+        "3 - (1344/(-10) + 2/5)",
+        "36"
+    ],
+    "Suppose 2*y + 12 = 6*y. Suppose y = f - 15. Solve -8 = -4*w, -3*d - 4*w + f = -8*d for d.": [
+        "2*y + 12 = 6*y",
+        "y = f - 15",
+        "-8 = -4*w",
+        "-3*d - 4*w + f = -8*d",
+        "d"
+    ],
+    "Let l(v) = -v**3 + 12*v**2 + 13*v + 2. Let r(q) = -2*q + 5. Let c be r(-4). Let y be l(c). Solve -w + 2 = -3*s - 8, s + 1 = -y*w for s.": [
+        "l(v) = -v**3 + 12*v**2 + 13*v + 2",
+        "r(q) = -2*q + 5",
+        "c",
+        "r(-4)",
+        "y",
+        "l(c)",
+        "-w + 2 = -3*s - 8",
+        "s + 1 = -y*w",
+        "s"
+    ],
+    "Suppose 0 = f + 1, 17*f = 5*w + 12*f - 15. Suppose -3*s + 2 = -13. Suppose s*c + 3*j = 36, 3*c + 0*j - 18 = -3*j. Solve 20 = a - 5*z, -2*a + c = -w*z - 7 for a.": [
+        "0 = f + 1",
+        "17*f = 5*w + 12*f - 15",
+        "-3*s + 2 = -13",
+        "s*c + 3*j = 36",
+        "3*c + 0*j - 18 = -3*j",
+        "20 = a - 5*z",
+        "-2*a + c = -w*z - 7",
+        "a"
+    ],
+    "Let q be (25 + 1)/2 - (5 + -3). What is the highest common divisor of q and 99?": [
+        "q",
+        "(25 + 1)/2 - (5 + -3)",
+        "q",
+        "99"
+    ],
+    "Let n(j) = 5*j**3 - j**2 + 2*j - 1. Let u be 7/9 - 6/(-27). Let v be n(u). Calculate the greatest common factor of 1 and v.": [
+        "n(j) = 5*j**3 - j**2 + 2*j - 1",
+        "u",
+        "7/9 - 6/(-27)",
+        "v",
+        "n(u)",
+        "1",
+        "v"
+    ],
+    "Let f be (-6)/5*(-360)/(-27). Suppose -5*k - 5*a = -335, 0*k = 4*k + 3*a - 271. Let p = k + f. Calculate the greatest common factor of p and 6.": [
+        "f",
+        "(-6)/5*(-360)/(-27)",
+        "-5*k - 5*a = -335",
+        "0*k = 4*k + 3*a - 271",
+        "p = k + f",
+        "p",
+        "6"
+    ],
+    "Let k(w) = -w**2 + 13*w - 4. What are the prime factors of k(6)?": [
+        "k(w) = -w**2 + 13*w - 4",
+        "k(6)"
+    ],
+    "Let w(x) = x**2 + 10*x + 24. List the prime factors of w(-11).": [
+        "w(x) = x**2 + 10*x + 24",
+        "w(-11)"
+    ],
+    "Let x(m) = m**3 + 6*m**2 - 7*m + 4. Let k be x(-7). Suppose g + 4*u = -12, 3*u = -0*g - k*g + 4. What are the prime factors of g?": [
+        "x(m) = m**3 + 6*m**2 - 7*m + 4",
+        "k",
+        "x(-7)",
+        "g + 4*u = -12",
+        "3*u = -0*g - k*g + 4",
+        "g"
+    ]
+}

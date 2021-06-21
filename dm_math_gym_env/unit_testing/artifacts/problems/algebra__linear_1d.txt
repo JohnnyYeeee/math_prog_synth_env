@@ -1,0 +1,20 @@
+Solve 0 = 4*b + b + 15 for b.
+-3
+Solve -3*d = -0*d + 3 for d.
+-1
+Solve -4*h + 9 = 41 for h.
+-8
+Solve 2514*m = 2508*m - 24 for m.
+-4
+Solve -7*a + 6*a = 4 for a.
+-4
+Solve 288*w - 298*w = -70 for w.
+7
+Solve -14*h = -4*h - 10 for h.
+1
+Solve 5*w + 3 = -2 for w.
+-1
+Solve -15*f + 21*f - 12 = 0 for f.
+2
+Solve -22 = 6*c - 4 for c.
+-3

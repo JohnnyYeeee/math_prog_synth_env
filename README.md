@@ -1,1 +1,5 @@
-# dm_math_gym
+# Installation:
+
+To use this env in your own repo:
+
+`git clone `

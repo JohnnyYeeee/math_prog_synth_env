@@ -1,0 +1,20 @@
+Find the first derivative of 2*d**4 - 35*d**2 - 695 wrt d.
+8*d**3 - 70*d
+Find the third derivative of -a**3*g**3*t**3 + 642*a**3*g*t**3 + 16*a**3*g*t**2 - 5*a**2*t**2 + a*g**3 wrt t.
+-6*a**3*g**3 + 3852*a**3*g
+What is the second derivative of 12518*f**3 + 3760*f?
+75108*f
+What is the third derivative of -t**4 - 880*t**3 + 152*t**2 wrt t?
+-24*t - 5280
+What is the second derivative of 2*c*n**2*z**3 + 30*c*n**2 + 2*c*n*z**2 - 2*c + n**2*z**2 - 3*n*z**3 - 2*n*z wrt n?
+4*c*z**3 + 60*c + 2*z**2
+Find the first derivative of -1373*u**3 + 81 wrt u.
+-4119*u**2
+What is the derivative of -2612*k - 37?
+-2612
+Find the third derivative of w**6 - 2*w**5 + 579*w**4 - 5032*w**2.
+120*w**3 - 120*w**2 + 13896*w
+What is the third derivative of -70*f**5 + 6*f**2?
+-4200*f**2
+Differentiate 745*b**4 - 287 with respect to b.
+2980*b**3

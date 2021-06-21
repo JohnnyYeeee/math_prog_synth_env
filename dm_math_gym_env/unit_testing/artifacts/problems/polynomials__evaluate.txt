@@ -1,0 +1,20 @@
+Let i(h) = -7*h - 15. Determine i(-2).
+-1
+Let k(u) = u**2 + u - 4. What is k(0)?
+-4
+Let x(f) = -f - 19. Calculate x(9).
+-28
+Let t(x) = -x**2 + 3*x - 3. Calculate t(3).
+-3
+Let s(c) = -7*c**2 - 2. Determine s(-2).
+-30
+Let g(a) = a**2 - 4*a + 10. Determine g(12).
+106
+Let i(j) = -3*j - 45. Determine i(11).
+-78
+Let v(i) = 3*i + 19. Determine v(-9).
+-8
+Let j(m) = -m**3 - 11*m**2 - 14*m + 36. Give j(-9).
+0
+Let k(t) = -t**3 + 9*t**2 - t + 3. Determine k(9).
+-6

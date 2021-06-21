@@ -1,0 +1,20 @@
+Solve 0 = 4*f - 0*t - 4*t - 4, -4*f + t = -13 for f.
+4
+Solve 5*a = -2*h + 15, 0 = -2*h + 6*a - 2*a - 12 for h.
+0
+Solve 2*k + 14 = 2*j, -7*k - 4*j + 24 = -9*k for k.
+-2
+Solve -2*o - 3*w = 13, 0*o - 4*o - 5*w = 21 for o.
+1
+Solve -16 = 4*d - 4, 3*o = 4*d + 3 for o.
+-3
+Solve 3*z + w + 7 = 15, w - 3 = 2*z for z.
+1
+Solve 4*o + 7 = -0*o - 5*k, -11 = 2*o - 5*k for o.
+-3
+Solve -4*f + 3*t + 2 = 0, 0*t = 4*f + 2*t - 12 for f.
+2
+Solve 0 = -3*q - 4*n + 15, 3*q + 2*n = -3*n + 18 for q.
+1
+Solve 4*f - 35 + 0 = -3*y, 4*y - 30 = -2*f for f.
+5

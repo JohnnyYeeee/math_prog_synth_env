@@ -1,0 +1,12 @@
+comparison__closest.txt
+comparison__closest_composed.txt
+comparison__kth_biggest.txt
+comparison__kth_biggest_composed.txt
+comparison__pair.txt
+comparison__pair_composed.txt
+comparison__sort.txt
+comparison__sort_composed.txt
+numbers__place_value.txt
+numbers__place_value_composed.txt
+numbers__round_number.txt
+numbers__round_number_composed.txt

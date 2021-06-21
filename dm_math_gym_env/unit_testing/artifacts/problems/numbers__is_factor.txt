@@ -1,0 +1,20 @@
+Is 15 a factor of 720?
+True
+Does 11 divide 1973?
+False
+Is 347 a multiple of 3?
+False
+Does 28 divide 1204?
+True
+Is 17 a factor of 3594?
+False
+Is 23 a factor of 3059?
+True
+Does 16 divide 6606?
+False
+Is 54094 a multiple of 86?
+True
+Is 6 a factor of 5064?
+True
+Is 28 a factor of 840?
+True

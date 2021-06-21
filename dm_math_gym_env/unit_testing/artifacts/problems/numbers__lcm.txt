@@ -1,0 +1,20 @@
+Calculate the smallest common multiple of 351 and 141.
+16497
+Calculate the common denominator of -29/936 and -115/48.
+1872
+Calculate the common denominator of 79/195 and 113/60.
+780
+What is the lowest common multiple of 12 and 20?
+60
+Calculate the common denominator of -3/40 and 57/1652.
+16520
+What is the common denominator of 81/140 and 57/140?
+140
+What is the lowest common multiple of 4 and 4?
+4
+Find the common denominator of -7/33 and -55/54.
+594
+What is the common denominator of -11/1458 and -26/9?
+1458
+What is the smallest common multiple of 25 and 20?
+100

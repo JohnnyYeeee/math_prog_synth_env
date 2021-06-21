@@ -1,0 +1,20 @@
+Calculate the remainder when 93 is divided by 59.
+34
+What is the remainder when 779 is divided by 223?
+110
+What is the remainder when 1862 is divided by 16?
+6
+What is the remainder when 813 is divided by 24?
+21
+What is the remainder when 164 is divided by 85?
+79
+What is the remainder when 412 is divided by 13?
+9
+Calculate the remainder when 52 is divided by 9.
+7
+Calculate the remainder when 352 is divided by 138.
+76
+What is the remainder when 187 is divided by 107?
+80
+What is the remainder when 15193 is divided by 15?
+13
