@@ -23,3 +23,7 @@ env = gym.make('dm_math_gym_env:math-env-v0', config_file='params.yaml')
 ```
 
 All other code we used for training algorithms can be found at: https://github.com/joepalermo/dm_math_solvers
+
+## Run unit tests
+
+To run the unit tests, change working directory to the root of the project and then run `python -m unittest discover dm_math_gym_env/unit_testing`.
