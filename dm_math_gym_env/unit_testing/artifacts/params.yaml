@@ -1,5 +1,5 @@
 {
-    "num_problems_per_module": 100000,
+    "num_problems_per_module": 10,
     "num_problems_per_module_corpus": 30000,
     "validation_percentage": 0.2,
     "encode_question": true,
@@ -67,8 +67,8 @@
       "lcd",
       "prime_factors",
       "evaluate_function",
-      "not_op"
-      #            "differentiate_wrt",
+      "not_op",
+      "differentiate_wrt"
       #            "make_equation",
       #            "simplify",
       #            "make_function",

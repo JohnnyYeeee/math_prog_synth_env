@@ -65,7 +65,7 @@ def guess_until_problem_solved(env, question, answer, verbose=False, max_episode
     episode_i = 0
     graph_guessed_correctly = False
     encoded_question, _ = env.reset_from_text(question, answer)
-    print(f"\nquestion: {env.decode(encoded_question)}")
+    print(f"\nquestion: {env.decode_question(encoded_question)}")
     while not graph_guessed_correctly and episode_i < max_episode_index:
         encoded_question, _ = env.reset_from_text(question, answer)
         done = False

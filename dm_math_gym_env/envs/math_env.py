@@ -157,9 +157,10 @@ class MathEnv(gym.Env):
         )
         return np.array(encoded_ids)
 
-    def decode(self, encoded_ids):
+    def decode_question(self, encoded_ids):
+        ''
         # filter out padding tokens before decoding
-        encoded_ids = [id_ for id_ in encoded_ids.tolist() if id_ != self.question_padding_token]
+        encoded_ids = [id_ for id_ in encoded_ids.tolist() if id_ < self.question_padding_token]
         return self.tokenizer.decode(encoded_ids)
 
     # utilities to reset the environment -------------------------------------------------------------------------------

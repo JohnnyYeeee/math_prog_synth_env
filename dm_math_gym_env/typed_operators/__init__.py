@@ -226,12 +226,12 @@ def project_rhs(equation: Equation) -> Expression:
 
 
 def substitution_left_to_right(arb: object, eq: Equation) -> object:
-    return object(str(arb).replace(str(project_lhs(eq)), str(project_rhs(eq))))
+    return str(arb).replace(str(project_lhs(eq)), str(project_rhs(eq)))
 
 
 def substitution_right_to_left(arb: object, eq: Equation) -> object:
     """substitution_right_to_left"""
-    return object(str(arb).replace(str(project_rhs(eq)), str(project_lhs(eq))))
+    return str(arb).replace(str(project_rhs(eq)), str(project_lhs(eq)))
 
 
 def factor(inpt: Expression) -> Expression:

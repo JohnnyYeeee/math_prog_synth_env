@@ -1,19 +1,16 @@
-from hparams import HParams
-hparams = HParams('artifacts/.', hparams_filename='hparams', name='rl_math', ask_before_deletion=False)
 import numpy as np
 from dm_math_gym_env.utils import extract_formal_elements
 from dm_math_gym_env.envs.math_env import MathEnv
 from dm_math_gym_env.typed_operators import *
-from utils import read_text_file
 import unittest
 
+env = MathEnv('dm_math_gym_env/unit_testing/artifacts/params.yaml')
 
 class Test(unittest.TestCase):
     def test_algebra_linear_1d_fail_1(self):
-        env = MathEnv(hparams.env)
         # reset - then fail after 1st action
         encoded_question, _ = env.reset_from_text("Solve 0 = 4*b + b + 15 for b.", "-3")
-        question = env.decode(encoded_question)
+        question = env.decode_question(encoded_question)
         f = extract_formal_elements(question)  # for use below
         assert f == ["0 = 4*b + b + 15", "b"]
         action = "f0"
@@ -27,10 +24,10 @@ class Test(unittest.TestCase):
         assert done
 
     def test_algebra_linear_1d_fail_2(self):
-        env = MathEnv(hparams.env)
+        #env = MathEnv('params.yaml')
         # reset - then fail after 2nd action
         encoded_question, _ = env.reset_from_text("Solve 0 = 4*b + b + 15 for b.", "-3")
-        question = env.decode(encoded_question)
+        question = env.decode_question(encoded_question)
         assert question == "Solve 0 = 4*b + b + 15 for b."
         action = solve_system
         action_index = env.get_action_index(action)
@@ -52,10 +49,10 @@ class Test(unittest.TestCase):
         assert done
 
     def test_algebra_linear_1d_fail_3(self):
-        env = MathEnv(hparams.env)
+        #env = MathEnv('params.yaml')
         # reset - then fail after 1st action
         encoded_question, _ = env.reset_from_text("Solve 0 = 4*b + b + 15 for b.", "-3")
-        question = env.decode(encoded_question)
+        question = env.decode_question(encoded_question)
         f = extract_formal_elements(question)  # for use below
         assert f == ["0 = 4*b + b + 15", "b"]
         action = "f10"  # indexing out of range
@@ -65,10 +62,10 @@ class Test(unittest.TestCase):
         assert done
 
     def test_algebra_linear_1d_success_1(self):
-        env = MathEnv(hparams.env)
+        #env = MathEnv('params.yaml')
         # reset - then succeed after 4th action
         encoded_question, _ = env.reset_from_text("Solve 0 = 4*b + b + 15 for b.", "-3")
-        question = env.decode(encoded_question)
+        question = env.decode_question(encoded_question)
         assert question == "Solve 0 = 4*b + b + 15 for b."
         action = lookup_value
         action_index = env.get_action_index(action)
@@ -126,11 +123,11 @@ class Test(unittest.TestCase):
         assert done
 
     def test_calculus_differentiate_success_1_with_masking(self):
-        env = MathEnv(hparams.env)
+        #env = MathEnv('params.yaml')
         # reset - then succeed after 4th action
         encoded_question, _ = env.reset_from_text("Find the first derivative of 2*d**4 - 35*d**2 - 695 wrt d.",
                                                   "8*d**3 - 70*d")
-        question = env.decode(encoded_question)
+        question = env.decode_question(encoded_question)
         assert question == "Find the first derivative of 2*d**4 - 35*d**2 - 695 wrt d."
         # take action
         action = differentiate_wrt
@@ -160,11 +157,11 @@ class Test(unittest.TestCase):
         assert done
 
     def test_calculus_differentiate_success_2_with_masking(self):
-        env = MathEnv(hparams.env)
+        #env = MathEnv('params.yaml')
         # reset - then succeed after 4th action
         encoded_question, _ = env.reset_from_text("Find the first derivative of 2*d**4 - 35*d**2 - 695 wrt d.",
                                                   "8*d**3 - 70*d")
-        question = env.decode(encoded_question)
+        question = env.decode_question(encoded_question)
         assert question == "Find the first derivative of 2*d**4 - 35*d**2 - 695 wrt d."
         # take action
         action = differentiate
@@ -184,10 +181,10 @@ class Test(unittest.TestCase):
         )
 
     def test_numbers_div_remainder_success(self):
-        env = MathEnv(hparams.env)
+        #env = MathEnv('params.yaml')
         # reset - then succeed after 4th action
         encoded_question, _ = env.reset_from_text("Calculate the remainder when 93 is divided by 59.", "34")
-        question = env.decode(encoded_question)
+        question = env.decode_question(encoded_question)
         assert question == "Calculate the remainder when 93 is divided by 59."
         assert env.compute_graph.formal_elements == [Value("93"), Value("59")]
         # first action
@@ -221,10 +218,10 @@ class Test(unittest.TestCase):
         assert done
 
     def test_numbers_gcd_success(self):
-        env = MathEnv(hparams.env)
+        #env = MathEnv('params.yaml')
         # reset - then succeed after 4th action
         encoded_question, _ = env.reset_from_text("Calculate the highest common divisor of 1300 and 300.", "100")
-        question = env.decode(encoded_question)
+        question = env.decode_question(encoded_question)
         assert question == "Calculate the highest common divisor of 1300 and 300."
         # first action
         action = gcd
@@ -257,10 +254,10 @@ class Test(unittest.TestCase):
         assert done
 
     def test_is_prime_success_1(self):
-        env = MathEnv(hparams.env)
+        #env = MathEnv('params.yaml')
         # reset - then succeed after 4th action
         encoded_question, _ = env.reset_from_text("Is 93163 a prime number?", "False")
-        question = env.decode(encoded_question)
+        question = env.decode_question(encoded_question)
         assert question == "Is 93163 a prime number?"
         # first action
         action = is_prime
@@ -283,10 +280,10 @@ class Test(unittest.TestCase):
         assert done
 
     def test_is_prime_success_2(self):
-        env = MathEnv(hparams.env)
+        #env = MathEnv('params.yaml')
         # reset - then succeed after 4th action
         encoded_question, _ = env.reset_from_text("Is 66574 a composite number?", "True")
-        question = env.decode(encoded_question)
+        question = env.decode_question(encoded_question)
         assert question == "Is 66574 a composite number?"
         # first action
         action = not_op
@@ -319,11 +316,11 @@ class Test(unittest.TestCase):
         assert done
 
     def test_problem_third_diff_success(self):
-        env = MathEnv(hparams.env)
+        #env = MathEnv('params.yaml')
         # reset - then succeed after 4th action
         encoded_question, _ = env.reset_from_text("Find the third derivative of -272*j**5 + j**3 - 8234*j**2.",
                                                   "-16320*j**2 + 6")
-        question = env.decode(encoded_question)
+        question = env.decode_question(encoded_question)
         assert question == "Find the third derivative of -272*j**5 + j**3 - 8234*j**2."
         # take action
         action_index = env.get_action_index(differentiate)
@@ -345,9 +342,9 @@ class Test(unittest.TestCase):
         assert done
 
     def test_max_nodes_failure(self):
-        env = MathEnv(hparams.env)
+        #env = MathEnv('params.yaml')
         encoded_question, _ = env.reset_from_text("Is 66574 a composite number?", "True")
-        question = env.decode(encoded_question)
+        question = env.decode_question(encoded_question)
         assert question == "Is 66574 a composite number?"
         nt_action_index = env.get_action_index(not_op)
         for i in range(env.max_num_nodes-1):
@@ -363,9 +360,9 @@ class Test(unittest.TestCase):
 
 
     def test_lcd1(self):
-        env = MathEnv(hparams.env)
+        #env = MathEnv('params.yaml')
         encoded_question, _ = env.reset_from_text("What is the common denominator of -64/1065 and 92/105?", "7455")
-        question = env.decode(encoded_question)
+        question = env.decode_question(encoded_question)
         # lcd
         assert question == "What is the common denominator of -64/1065 and 92/105?"
         action_index = env.get_action_index(lcd)
@@ -384,9 +381,9 @@ class Test(unittest.TestCase):
         assert done
 
     def test_lcd2(self):
-        env = MathEnv(hparams.env)
+        #env = MathEnv('params.yaml')
         encoded_question, _ = env.reset_from_text("Calculate the common denominator of 1/(3/(-6)) - 402/(-60) and -71/12.", "60")
-        question = env.decode(encoded_question)
+        question = env.decode_question(encoded_question)
         # lcd
         assert question == "Calculate the common denominator of 1/(3/(-6)) - 402/(-60) and -71/12."
         action_index = env.get_action_index(lcd)
@@ -407,7 +404,7 @@ class Test(unittest.TestCase):
     def test_polynomial_roots_1(self):
         question = "What is f in -87616*f**2 - 1776*f - 9 = 0?"
         answer = "-3/296"
-        env = MathEnv(hparams.env)
+        #env = MathEnv('params.yaml')
         encoded_question, _ = env.reset_from_text(question, answer)
         action = lookup_value
         action_index = env.get_action_index(action)
@@ -442,7 +439,7 @@ class Test(unittest.TestCase):
     def test_polynomial_roots_2(self):
         question = "Solve -3*h**2/2 - 24*h - 45/2 = 0 for h."
         answer = "-15, -1"
-        env = MathEnv(hparams.env)
+        #env = MathEnv('params.yaml')
         encoded_question, _ = env.reset_from_text(question, answer)
         action = lookup_value
         action_index = env.get_action_index(action)
