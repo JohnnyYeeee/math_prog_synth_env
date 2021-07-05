@@ -14,11 +14,11 @@ Before running the environment several pre-requisites need to be completed:
 - The data needs to be split into train/val/test sets
 - A tokenizer needs to be created
 
-Upon running `gym.make('dm_math_gym_env:math-env-v0', config_file=params.yaml)` a check is performed to determine if the last step (tokenizer creation) has been completed. If not then all 3 steps will be automatically completed. 
+Upon running `gym.make('dm_math_gym_env:math-env-v0', config_file='params.yaml')` a check is performed to determine if the last step (tokenizer creation) has been completed. If not then all 3 steps will be automatically completed. 
 
 ```python
 import gym
-# First time running the below command will take up to an hour to download all data
+# the first time running this may take awhile (particularly to download the data) 
 env = gym.make('dm_math_gym_env:math-env-v0', config_file='params.yaml')
 ```
 
