@@ -1,5 +1,6 @@
 
 from inspect import signature
+import os
 from pathlib import Path
 from sympy import sympify
 from random import sample
@@ -14,17 +15,21 @@ from dm_math_gym_env.utils import load_data, split_validation_data
 import torch
 
 class MathEnv(gym.Env):
-    def __init__(self, config):
+    def __init__(self, config_file):
+        import yaml
+
         self.compute_graph = None
         self.episode_actions = None
         # load config
+        with open(config_file, 'r') as stream:
+            config = yaml.safe_load(stream)
         self.config = config
-        self.encode_question = config.encode_question
-        self.max_num_nodes = self._max_episode_steps = config.max_num_nodes
-        self.max_formal_elements = config.max_formal_elements
-        self.max_difficulty = config.max_difficulty
-        self.question_vocab_size = config.question_vocab_size
-        self.max_sequence_length = config.max_sequence_length
+        self.encode_question = config["encode_question"]
+        self.max_num_nodes = self._max_episode_steps = config["max_num_nodes"]
+        self.max_formal_elements = config["max_formal_elements"]
+        self.max_difficulty = config["max_difficulty"]
+        self.question_vocab_size = config["question_vocab_size"]
+        self.max_sequence_length = config["max_sequence_length"]
         # define available operator functions
         self.operators = [
             lookup_value,
@@ -51,11 +56,11 @@ class MathEnv(gym.Env):
             evaluate_function,
             not_op
         ]
-        # ensure that every operator listed in config.operators is present in the above list
+        # ensure that every operator listed in config["operators"] is present in the above list
         valid_op_names = [op.__name__ for op in self.operators]
-        assert all([op in valid_op_names for op in config.operators])
+        assert all([op in valid_op_names for op in config["operators"]])
         # define action and observation space
-        self.operators = [operator for operator in self.operators if (operator.__name__ in config.operators)]
+        self.operators = [operator for operator in self.operators if (operator.__name__ in config["operators"])]
         self.operator_output_types = [
             signature(operator).return_annotation for operator in self.operators
         ]
@@ -69,17 +74,22 @@ class MathEnv(gym.Env):
         self.action_space = spaces.Discrete(len(self.actions))
         self.action_indices = np.arange(len(self.actions))
         self.observation_space = spaces.MultiDiscrete(
-            [self.total_vocab_size for _ in range(config.max_sequence_length)]
+            [self.total_vocab_size for _ in range(config["max_sequence_length"])]
         )
+
+        # Set up if data not downloaded yet
+        if not os.path.isfile(self.config["tokenizer_filepath"] + ".model"):
+            print("No data/tokenizer found: Redownloading data")
+            self.setup()
         # load data
         self.train = load_data(config, train=True)
         self.val = split_validation_data(config, self.train)
         self.test = load_data(config, train=False)
         # load tokenizer
-        self.question_padding_token = config.question_vocab_size
-        # increment config.question_vocab_size by 1 to account for padding token
-        self.action_padding_token = (config.question_vocab_size + 1) + self.num_actions
-        self.tokenizer = spm.SentencePieceProcessor(model_file=config.tokenizer_filepath)
+        self.question_padding_token = config["question_vocab_size"]
+        # increment config["question_vocab_size"] by 1 to account for padding token
+        self.action_padding_token = (config["question_vocab_size"] + 1) + self.num_actions
+        self.tokenizer = spm.SentencePieceProcessor(model_file=self.config["tokenizer_filepath"] +  ".model")
 
 
     def step(self, action_index):
@@ -143,7 +153,7 @@ class MathEnv(gym.Env):
         encoded_ids = self.tokenizer.encode(raw_observation)
         # pad the encoded ids up to a maximum length
         encoded_ids.extend(
-            [self.question_padding_token for _ in range(self.config.max_sequence_length - len(encoded_ids))]
+            [self.question_padding_token for _ in range(self.config["max_sequence_length"] - len(encoded_ids))]
         )
         return np.array(encoded_ids)
 
@@ -293,3 +303,98 @@ class MathEnv(gym.Env):
 
     def close(self):
         pass
+
+    def setup(self):
+        """To be ran on first use of the environment.
+        Downloads data, splits data and trains tokenizer."""
+        print("Downloading Data:")
+        self._get_data()
+        print("Splitting Data:")
+        self._split_data()
+        print("Training Tokenizer:")
+        self._train_tokenizer()
+
+
+    def _get_data(self):
+        import tarfile
+        import requests
+
+        url = 'https://storage.googleapis.com/mathematics-dataset/mathematics_dataset-v1.0.tar.gz'
+        myfile = requests.get(url)
+        open("mathematics_dataset-v1.0.tar.gz", 'wb').write(myfile.content)
+
+        print("Data Downloaded")
+
+        data_tar = tarfile.open(name=self.config["data_download_location"], mode='r:gz')
+        data_tar.extractall(path=self.config["data_unpack_dir"])
+
+        print("Data unpacked")
+
+
+    def _split_data(self):
+        import os
+        from tqdm import tqdm
+
+        problem_filepaths = [os.path.join(os.path.join(self.config["data_unpack_dir"],self.config["all_data_dirpath"]), filename) for filename in
+                             self.config["selected_filenames"]]
+        train_problem_filepaths = [os.path.join(self.config["data_dirpath"], filename) for filename in
+                                   self.config["selected_filenames"]]
+        test_problem_filepaths = [os.path.join(self.config["test_data_dirpath"], filename) for filename in
+                                  self.config["selected_filenames"]]
+
+        if os.path.isdir(self.config["data_dirpath"]) or os.path.isdir(self.config["test_data_dirpath"]):
+            raise ValueError(f"data directories already exist")
+        else:
+            os.mkdir(self.config["data_dirpath"])
+            os.mkdir(self.config["test_data_dirpath"])
+
+        for filepath, train_filepath, test_filepath in tqdm(
+                zip(problem_filepaths, train_problem_filepaths, test_problem_filepaths)):
+            # read data
+            with open(filepath, "r") as f:
+                lines = f.readlines()
+            num_pairs = len(lines) // 2
+            num_train_pairs = int((1 - self.config["test_percentage"]) * num_pairs)
+
+            # Write data
+            with open(train_filepath, "w") as f:
+                f.writelines(lines[:2 * num_train_pairs])
+            with open(test_filepath, "w") as f:
+                f.writelines(lines[2 * num_train_pairs:])
+        print("train and test datasets have been created")
+
+    def _get_corpus_for_tokenizer(self):
+        from random import shuffle
+        from sklearn.model_selection import train_test_split
+
+        filepaths = [
+            f"mathematics_dataset-v1.0/train-easy/{filename}" for filename in self.config["selected_filenames"]
+        ]
+        questions = []
+
+        for filepath in filepaths:
+            with open(filepath, "r") as f:
+                lines = f.readlines()
+            num_pairs = min(len(lines) // 2, self.config["num_problems_per_module_corpus"])
+            for i in range(0, 2 * num_pairs, 2):
+                question = lines[i].strip()
+                answer = lines[i + 1].strip()
+                questions.append(question)
+
+        shuffle(questions)
+        train_questions, val_questions = train_test_split(questions, test_size=0.4)
+        with open(self.config["corpus_path"], "w") as f:
+            f.write("\n".join(train_questions))
+        print("Downloaded corpus for training tokenizer")
+
+    def _train_tokenizer(self):
+        import sentencepiece as spm
+        #Get corpus
+        self._get_corpus_for_tokenizer()
+        # train tokenizer on question corpus
+        hardcoded_symbols = ['G']  # why is 'G' needed?
+        spm.SentencePieceTrainer.train(input=self.config["corpus_path"],
+                                       model_prefix=self.config["tokenizer_filepath"],
+                                       vocab_size=250,
+                                       user_defined_symbols=hardcoded_symbols)
+        print("Tokenizer saved")

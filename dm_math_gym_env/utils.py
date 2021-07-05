@@ -126,15 +126,15 @@ def load_data(config, train=True):
     data = {}
     print("loading problems")
     if train:
-        problem_filepaths = [os.path.join(config.data_dirpath, filename) for filename in config.selected_filenames]
+        problem_filepaths = [os.path.join(config["data_dirpath"], filename) for filename in config["selected_filenames"]]
     else:
-        problem_filepaths = [os.path.join(config.test_data_dirpath, filename) for filename in config.selected_filenames]
+        problem_filepaths = [os.path.join(config["test_data_dirpath"], filename) for filename in config["selected_filenames"]]
 
     problem_counts = {}
     for filepath in tqdm(problem_filepaths):
         with open(filepath, "r") as f:
             lines = f.readlines()
-        num_pairs = min(len(lines) // 2, config.num_problems_per_module)
+        num_pairs = min(len(lines) // 2, config["num_problems_per_module"])
         for i in range(0, 2 * num_pairs, 2):
             question = lines[i].strip()
             answer = lines[i + 1].strip()
@@ -145,7 +145,7 @@ def load_data(config, train=True):
                 else 0
             )
             # don't load problems with difficulty above the maximum
-            if difficulty > config.max_difficulty:
+            if difficulty > config["max_difficulty"]:
                 continue
             module_name = get_module_name_from_filepath(filepath)
             # increment problem count for (module_name, difficulty)
@@ -164,7 +164,7 @@ def load_data(config, train=True):
                     data[module_name][difficulty] = [problem_dict]
             else:
                 data[module_name] = {difficulty: [problem_dict]}
-    if config.univariate_differentiation:
+    if config["univariate_differentiation"]:
         data['calculus__differentiate'][0] = filter_univariate(data['calculus__differentiate'][0])
     return data
 
@@ -174,7 +174,7 @@ def split_validation_data(config, train):
         val[module_name] = {}
         for difficulty in train[module_name]:
             num_examples = len(train[module_name][difficulty])
-            num_val = int(num_examples * config.validation_percentage)
+            num_val = int(num_examples * config["validation_percentage"])
             val[module_name][difficulty] = train[module_name][difficulty][:num_val]
             train[module_name][difficulty] = train[module_name][difficulty][num_val:]
             assert (
