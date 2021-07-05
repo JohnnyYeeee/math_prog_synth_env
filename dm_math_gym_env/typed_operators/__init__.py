@@ -8,15 +8,6 @@ import time
 
 # type definitions --------------------------------------
 
-
-class EquationOrExpression:
-    def __init__(self, equation_or_expression: str):
-        self.equation_or_expression = str(equation_or_expression)
-
-    def __str__(self):
-        return self.equation_or_expression
-
-
 class Equation(object):
     def __init__(self, equation: str):
         assert len(equation.split("=")) == 2

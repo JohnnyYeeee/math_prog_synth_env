@@ -327,7 +327,6 @@ class MathEnv(gym.Env):
 
         data_tar = tarfile.open(name=self.config["data_download_location"], mode='r:gz')
         data_tar.extractall(path=self.config["data_unpack_dir"])
-
         print("Data unpacked")
 
 
