@@ -395,6 +395,6 @@ class MathEnv(gym.Env):
         hardcoded_symbols = ['G']  # why is 'G' needed?
         spm.SentencePieceTrainer.train(input=self.config["corpus_path"],
                                        model_prefix=self.config["tokenizer_filepath"],
-                                       vocab_size=250,
+                                       vocab_size=self.config["question_vocab_size"],
                                        user_defined_symbols=hardcoded_symbols)
         print("Tokenizer saved")

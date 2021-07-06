@@ -1,24 +1,25 @@
 {
-    "num_problems_per_module": 100000,
-    "num_problems_per_module_corpus": 30000,
-    "validation_percentage": 0.2,
-    "encode_question": true,
-    "max_sequence_length": 125,
-    "question_vocab_size": 250,
-    "max_difficulty": 0,
-    "univariate_differentiation": true,
-    "num_environments": 50,
-    "corpus_path": "corpus.txt",
-    "tokenizer_filepath": "tokenizer",
-    "max_formal_elements": 13,
-    "max_num_nodes": 7,
-    "data_download_location": "mathematics_dataset-v1.0.tar.gz",
-    "data_unpack_dir": ".",
-    "all_data_dirpath": "mathematics_dataset-v1.0/train-easy",
-    "data_dirpath": "mathematics_dataset-v1.0/train",
-    "test_data_dirpath": "mathematics_dataset-v1.0/test",
-    "test_percentage": 0.1,                                           # Percentage of data to be used as test set
-    "selected_filenames": [
+
+    "num_problems_per_module": 1000000,                                # int, Number of problems per module for training algorithm
+    "num_problems_per_module_corpus": 30000,                           # int, Number of problems per module for training tokenizer
+    "validation_percentage": 0.2,                                      # float, Percentage of data to use as validation set
+    "encode_question": true,                                           # bool, controls whether question is encoded using tokenizer
+    "max_sequence_length": 125,                                        # int, Maximum length of encodings
+    "question_vocab_size": 250,                                        # int, tokenizer vocab size
+    "max_difficulty": 0,                                               # int, Controls maximum difficulty of problems in the dataset
+    "univariate_differentiation": true,                                # bool, "true" removes all problems from calculus_differentiate with multiple variables
+    "num_environments": 50,                                            # int, Number of environments to run in parallel
+    "corpus_path": "corpus.txt",                                       # str, path to corpus for training tokenizer
+    "tokenizer_filepath": "tokenizer",                                 # str, prefix for saving tokenizer
+    "max_formal_elements": 13,                                         # int, max number of formal elements in a given problem
+    "max_num_nodes": 7,                                                # int, max number of nodes in a constructed graph. Setting this lower limits search depth.
+    "data_download_location": "mathematics_dataset-v1.0.tar.gz",       # str, path to download packed data
+    "data_unpack_dir": ".",                                            # str, directory to unpack data to. Creates a new directory in this location
+    "all_data_dirpath": "mathematics_dataset-v1.0/train-easy",         # str, path to data before splitting into train and test sets
+    "data_dirpath": "mathematics_dataset-v1.0/train",                  # str, path to train data
+    "test_data_dirpath": "mathematics_dataset-v1.0/test",              # str, path to test data
+    "test_percentage": 0.1,                                            # float, Percentage of data to use as test set
+    "selected_filenames": [                                            # List[str], modules to include in training/evaluation
                           'numbers__is_factor.txt',
                           'numbers__is_prime.txt',
                           'numbers__list_prime_factors.txt',
@@ -43,16 +44,7 @@
                           'polynomials__evaluate_composed.txt',
                           'polynomials__compose.txt'
                      ],
-      "types":[
-      "object",
-      "Equation",
-      "Function",
-      "Expression",
-      "Variable",
-      "Value",
-      "Rational"
-    ],
-      "operators":[
+      "operators":[                                                    # List[str], operators that can be used for constructing graphs
       "lookup_value",
       "solve_system",
       "append",
