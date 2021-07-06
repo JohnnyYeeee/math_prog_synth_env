@@ -1,17 +1,17 @@
 {
 
-    "num_problems_per_module": 1000000,                                # int, Number of problems per module for training algorithm
-    "num_problems_per_module_corpus": 30000,                           # int, Number of problems per module for training tokenizer
-    "validation_percentage": 0.2,                                      # float, Percentage of data to use as validation set
+    "num_problems_per_module": 1000000,                                # int, max samples selected per module
+    "num_problems_per_module_corpus": 30000,                           # int, max samples per module used to create tokenizer
+    "validation_percentage": 0.2,                                      # float, percentage of data to use as validation set
     "encode_question": true,                                           # bool, controls whether question is encoded using tokenizer
-    "max_sequence_length": 125,                                        # int, Maximum length of encodings
+    "max_sequence_length": 125,                                        # int, size of the observation space
     "question_vocab_size": 250,                                        # int, tokenizer vocab size
-    "max_difficulty": 0,                                               # int, Controls maximum difficulty of problems in the dataset
+    "max_difficulty": 0,                                               # int, controls maximum difficulty of problems in the dataset
     "univariate_differentiation": true,                                # bool, "true" removes all problems from calculus_differentiate with multiple variables
     "num_environments": 50,                                            # int, Number of environments to run in parallel
     "corpus_path": "corpus.txt",                                       # str, path to corpus for training tokenizer
     "tokenizer_filepath": "tokenizer",                                 # str, prefix for saving tokenizer
-    "max_formal_elements": 13,                                         # int, max number of formal elements in a given problem
+    "max_formal_elements": 13,                                         # int, max number of formal elements in a given problem. Setting this lower reduces action space
     "max_num_nodes": 7,                                                # int, max number of nodes in a constructed graph. Setting this lower limits search depth.
     "data_download_location": "mathematics_dataset-v1.0.tar.gz",       # str, path to download packed data
     "data_unpack_dir": ".",                                            # str, directory to unpack data to. Creates a new directory in this location
