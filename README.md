@@ -1,4 +1,10 @@
-# Setup:
+# math_prog_synth_env
+
+This repository contains an implementation of math_prog_synth_env as described in <TODO link paper here>. 
+
+The full code used to produce the results reported in the paper can be found here: https://github.com/joepalermo/dm_math_solvers
+
+## Setup:
 
 ``` bash
 git clone https://github.com/JohnnyYeeee/math_prog_synth_env.git
@@ -9,20 +15,19 @@ conda activate math_prog_synth_env
 pip install -e math_prog_synth_env
 ```
 
-Before running the environment several pre-requisites need to be completed:
-- The raw data (https://storage.googleapis.com/mathematics-dataset/mathematics_dataset-v1.0.tar.gz) needs to be downloaded
-- The data needs to be split into train/val/test sets
-- A tokenizer needs to be created
-
-Upon running `gym.make('math_prog_synth_env:math-env-v0', config_file='params.yaml')` a check is performed to determine if the last step (tokenizer creation) has been completed. If not then all 3 steps will be automatically completed. 
-
 ```python
 import gym
 # the first time running this may take awhile (particularly to download the data) 
 env = gym.make('math_prog_synth_env:math-env-v0', config_file='params.yaml')
 ```
 
-All other code we used for training algorithms can be found at: https://github.com/joepalermo/dm_math_solvers
+Before running the environment several pre-requisites need to be completed:
+
+- The raw data (https://storage.googleapis.com/mathematics-dataset/mathematics_dataset-v1.0.tar.gz) needs to be downloaded
+- The data needs to be split into train/val/test sets
+- A tokenizer needs to be created
+
+Upon running `gym.make('math_prog_synth_env:math-env-v0', config_file='params.yaml')` a check is performed to determine if the last step (tokenizer creation) has been completed. If not then all 3 steps will be automatically completed. 
 
 ## Run unit tests
 
