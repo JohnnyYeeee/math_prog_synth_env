@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from dm_math_gym_env.typed_operators import *
+from math_prog_synth_env.typed_operators import *
 from sympy import sympify
 
 

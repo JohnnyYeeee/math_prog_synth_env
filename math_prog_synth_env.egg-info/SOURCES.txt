@@ -1,0 +1,7 @@
+README.md
+setup.py
+math_prog_synth_env.egg-info/PKG-INFO
+math_prog_synth_env.egg-info/SOURCES.txt
+math_prog_synth_env.egg-info/dependency_links.txt
+math_prog_synth_env.egg-info/requires.txt
+math_prog_synth_env.egg-info/top_level.txt

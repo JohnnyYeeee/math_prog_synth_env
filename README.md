@@ -1,12 +1,12 @@
 # Setup:
 
 ``` bash
-git clone https://github.com/JohnnyYeeee/dm_math_gym_env.git
+git clone https://github.com/JohnnyYeeee/math_prog_synth_env.git
 # optionally create and activate a new environment
-conda create -n dm_math_gym_env -y python=3.7
-conda activate dm_math_gym_env
+conda create -n math_prog_synth_env -y python=3.7
+conda activate math_prog_synth_env
 # install dependencies
-pip install -e dm_math_gym_env
+pip install -e math_prog_synth_env
 ```
 
 Before running the environment several pre-requisites need to be completed:
@@ -14,16 +14,16 @@ Before running the environment several pre-requisites need to be completed:
 - The data needs to be split into train/val/test sets
 - A tokenizer needs to be created
 
-Upon running `gym.make('dm_math_gym_env:math-env-v0', config_file='params.yaml')` a check is performed to determine if the last step (tokenizer creation) has been completed. If not then all 3 steps will be automatically completed. 
+Upon running `gym.make('math_prog_synth_env:math-env-v0', config_file='params.yaml')` a check is performed to determine if the last step (tokenizer creation) has been completed. If not then all 3 steps will be automatically completed. 
 
 ```python
 import gym
 # the first time running this may take awhile (particularly to download the data) 
-env = gym.make('dm_math_gym_env:math-env-v0', config_file='params.yaml')
+env = gym.make('math_prog_synth_env:math-env-v0', config_file='params.yaml')
 ```
 
 All other code we used for training algorithms can be found at: https://github.com/joepalermo/dm_math_solvers
 
 ## Run unit tests
 
-To run the unit tests, change working directory to the root of the project and then run `python -m unittest discover dm_math_gym_env/unit_testing`.
+To run the unit tests, change working directory to the root of the project and then run `python -m unittest discover math_prog_synth_env/unit_testing`.

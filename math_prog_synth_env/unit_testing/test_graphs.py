@@ -1,6 +1,6 @@
 import unittest
-from dm_math_gym_env.utils import extract_formal_elements, cast_formal_element
-from dm_math_gym_env.typed_operators import *
+from math_prog_synth_env.utils import extract_formal_elements, cast_formal_element
+from math_prog_synth_env.typed_operators import *
 
 
 class Test(unittest.TestCase):

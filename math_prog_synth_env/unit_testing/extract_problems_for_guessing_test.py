@@ -1,5 +1,5 @@
 import os
-from dm_math_gym_env.utils import load_training_data
+from math_prog_synth_env.utils import load_training_data
 
 n = 20
 filename_to_top_lines = dict()

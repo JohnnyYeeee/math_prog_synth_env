@@ -1,5 +1,5 @@
 import unittest
-from dm_math_gym_env.utils import extract_formal_elements
+from math_prog_synth_env.utils import extract_formal_elements
 
 
 def test_string_equality(question, formal_elements):
@@ -29,7 +29,7 @@ class Test(unittest.TestCase):
         #     test_string_equality(question, formal_elements)
 
         # do strong test
-        from dm_math_gym_env.unit_testing.artifacts.extract_formal_elements_examples import typed_examples
+        from math_prog_synth_env.unit_testing.artifacts.extract_formal_elements_examples import typed_examples
         for question, formal_elements in typed_examples.items():
             test_type_equality(question, formal_elements)
 

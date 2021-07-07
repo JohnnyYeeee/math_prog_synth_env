@@ -1,10 +1,10 @@
 import numpy as np
-from dm_math_gym_env.utils import extract_formal_elements
-from dm_math_gym_env.envs.math_env import MathEnv
-from dm_math_gym_env.typed_operators import *
+from math_prog_synth_env.utils import extract_formal_elements
+from math_prog_synth_env.envs.math_env import MathEnv
+from math_prog_synth_env.typed_operators import *
 import unittest
 
-env = MathEnv('dm_math_gym_env/unit_testing/artifacts/params.yaml')
+env = MathEnv('math_prog_synth_env/unit_testing/artifacts/params.yaml')
 
 class Test(unittest.TestCase):
     def test_algebra_linear_1d_fail_1(self):

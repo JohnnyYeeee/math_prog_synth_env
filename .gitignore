@@ -1,0 +1,3 @@
+*.ipynb
+__pycache__
+mathematics_dataset-v1.0/*

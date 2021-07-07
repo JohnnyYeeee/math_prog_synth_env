@@ -1,5 +1,5 @@
 import unittest
-from dm_math_gym_env.utils import is_numeric
+from math_prog_synth_env.utils import is_numeric
 
 
 class Test(unittest.TestCase):

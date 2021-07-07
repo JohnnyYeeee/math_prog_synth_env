@@ -1,7 +1,7 @@
 import unittest
-from dm_math_gym_env.utils import extract_formal_elements
-from dm_math_gym_env.typed_operators import *
-from dm_math_gym_env.compute_graph import ComputeGraph, Node
+from math_prog_synth_env.utils import extract_formal_elements
+from math_prog_synth_env.typed_operators import *
+from math_prog_synth_env.compute_graph import ComputeGraph, Node
 
 
 class Test(unittest.TestCase):

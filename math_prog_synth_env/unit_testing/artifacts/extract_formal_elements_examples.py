@@ -1,4 +1,4 @@
-from dm_math_gym_env.typed_operators import *
+from math_prog_synth_env.typed_operators import *
 
 typed_examples = {
     "Solve 0 = 4*b + b + 15 for b.": [

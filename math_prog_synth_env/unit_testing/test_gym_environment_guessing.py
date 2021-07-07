@@ -1,5 +1,5 @@
-from dm_math_gym_env.envs.math_env import MathEnv
-from dm_math_gym_env.utils import guess_until_problem_solved, load_question_answer_pairs
+from math_prog_synth_env.envs.math_env import MathEnv
+from math_prog_synth_env.utils import guess_until_problem_solved, load_question_answer_pairs
 import unittest
 import os
 
@@ -8,8 +8,8 @@ class Test(unittest.TestCase):
     def test_guess_until_correct(self):
         """this test only terminates when the graph is correctly guessed or timeout is reached"""
         env = MathEnv('params.yaml')
-        for filename in [fn for fn in os.listdir('dm_math_gym_env/unit_testing/artifacts/problems') if '.txt' in fn]:
-            filepath = os.path.join(f'dm_math_gym_env/unit_testing/artifacts/problems/{filename}')
+        for filename in [fn for fn in os.listdir('math_prog_synth_env/unit_testing/artifacts/problems') if '.txt' in fn]:
+            filepath = os.path.join(f'math_prog_synth_env/unit_testing/artifacts/problems/{filename}')
             question_answer_pairs = load_question_answer_pairs(filepath)
             for question, answer in question_answer_pairs[:5]:
                 guess_until_problem_solved(env, question, answer, verbose=False, max_episode_index=50000)

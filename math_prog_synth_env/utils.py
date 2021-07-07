@@ -1,7 +1,7 @@
 import os
 import re
 from tqdm import tqdm
-from dm_math_gym_env.typed_operators import Equation, Function, Expression, Variable, Value, Rational
+from math_prog_synth_env.typed_operators import Equation, Function, Expression, Variable, Value, Rational
 import sympy
 
 

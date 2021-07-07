@@ -9,9 +9,9 @@ import numpy as np
 from gym import spaces
 from scipy.special import softmax
 import sentencepiece as spm
-from dm_math_gym_env.compute_graph import ComputeGraph
-from dm_math_gym_env.typed_operators import *
-from dm_math_gym_env.utils import load_data, split_validation_data
+from math_prog_synth_env.compute_graph import ComputeGraph
+from math_prog_synth_env.typed_operators import *
+from math_prog_synth_env.utils import load_data, split_validation_data
 import torch
 
 class MathEnv(gym.Env):
