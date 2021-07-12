@@ -1,6 +1,6 @@
 # math_prog_synth_env
 
-This repository contains an implementation of math_prog_synth_env as described in <TODO link paper here>. 
+This repository contains an implementation of math_prog_synth_env as described in [TODO link paper here]. 
 
 ![Graph construction video](https://github.com/JohnnyYeeee/math_prog_synth_env/blob/main/READ_ME_assets/graph_construction.gif?raw=true)
 
