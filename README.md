@@ -2,7 +2,7 @@
 
 This repository contains an implementation of math_prog_synth_env as described in <TODO link paper here>. 
 
-![Graph construction video](https://media.giphy.com/media/dvG6CNOZmzZmHQyXnA/giphy.gif)
+![Graph construction video](https://github.com/JohnnyYeeee/math_prog_synth_env/blob/main/READ_ME_assets/graph_construction.gif?raw=true)
 
 The full code used to produce the results reported in the paper can be found here: https://github.com/joepalermo/dm_math_solvers
 
