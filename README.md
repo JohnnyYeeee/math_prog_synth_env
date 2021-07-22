@@ -33,4 +33,4 @@ Upon running `gym.make('math_prog_synth_env:math-env-v0', config_file='params.ya
 
 ## Run unit tests
 
-To run the unit tests, change working directory to the root of the project and then run `python -m unittest discover math_prog_synth_env/unit_testing`.
+To run the unit tests, change working directory to the root of the project and then run `python -m unittest discover math_prog_synth_env/unit_testing`
